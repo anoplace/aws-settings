@@ -1,0 +1,121 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+hosted_zone "ano-place.com." do
+  rrset "ano-place.com.", "A" do
+    ttl 3600
+    resource_records(
+      "49.212.165.87"
+    )
+  end
+
+  rrset "ano-place.com.", "MX" do
+    ttl 3600
+    resource_records(
+      "1 aspmx.l.google.com",
+      "5 alt1.aspmx.l.google.com",
+      "5 alt2.aspmx.l.google.com",
+      "10 alt3.aspmx.l.google.com",
+      "10 alt4.aspmx.l.google.com",
+    )
+  end
+
+  rrset "ano-place.com.", "TXT" do
+    ttl 300
+    resource_records(
+      "\"google-site-verification=w4UAqfeF3zDxf6LoT5W6b6t0rYGNS-fXuH-lebMkjtM\""
+    )
+  end
+
+  rrset "host1.ano-place.com.", "A" do
+    ttl 3600
+    resource_records(
+      "49.212.165.87"
+    )
+  end
+
+  ["mail", "calendar", "drive", "sites", "groups"].each do|name|
+    rrset "#{name}.ano-place.com.", "CNAME" do
+      ttl 3600
+      resource_records(
+        "ghs.googlehosted.com"
+      )
+    end
+  end
+
+  rrset "www.ano-place.com.", "CNAME" do
+    ttl 3600
+    resource_records(
+      "host1.ano-place.com."
+    )
+  end
+end
+
+####################
+
+hosted_zone "ano-place.mobi." do
+
+end
+
+hosted_zone "anoplace.co." do
+
+end
+
+hosted_zone "anoplace.info." do
+
+end
+
+hosted_zone "anoplace.pw." do
+
+end
+
+hosted_zone "anoplace.sexy." do
+
+end
+
+hosted_zone "ano-place.club." do
+
+end
+
+hosted_zone "ano-place.info." do
+
+end
+
+hosted_zone "anoplace.biz." do
+
+end
+
+hosted_zone "anoplace.club." do
+
+end
+
+hosted_zone "anoplace.net." do
+
+end
+
+hosted_zone "ano-place.co." do
+
+end
+
+hosted_zone "ano-place.jp." do
+
+end
+
+hosted_zone "anoplace.jp." do
+
+end
+
+hosted_zone "anoplace.mobi." do
+
+end
+
+hosted_zone "ano-place.biz." do
+
+end
+
+hosted_zone "ano-place.pw." do
+
+end
+
+hosted_zone "ano-place.net." do
+
+end
