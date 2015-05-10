@@ -42,10 +42,11 @@ hosted_zone "ano-place.com." do
     end
   end
 
-  rrset "www.ano-place.com.", "CNAME" do
+  rrset "www.ano-place.com.", "A" do
     ttl 3600
     resource_records(
-      "host1.ano-place.com."
+      "192.30.252.153",
+      "192.30.252.154",
     )
   end
 end
